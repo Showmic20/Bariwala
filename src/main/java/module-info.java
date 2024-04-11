@@ -5,4 +5,6 @@ module com.example.home_management {
 
     opens com.example.home_management to javafx.fxml;
     exports com.example.home_management;
+    exports model;
+    opens model to javafx.fxml;
 }

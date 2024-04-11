@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -11,14 +12,17 @@
    <children>
       <Pane layoutX="-43.0" prefHeight="400.0" prefWidth="251.0" styleClass="side_ankerpanel" stylesheets="@style.css">
          <children>
-            <ChoiceBox fx:id="choiceBox" layoutX="64.0" layoutY="211.0" prefWidth="150.0" />
-            <Label fx:id="choicelabel" layoutX="64.0" layoutY="183.0" text="Select Your Employee type" textFill="WHITE" />
+            <ChoiceBox fx:id="choiceBox" layoutX="63.0" layoutY="206.0" prefWidth="150.0" styleClass="text_field" stylesheets="@style.css" />
+            <Label fx:id="choicelabel" alignment="CENTER" contentDisplay="CENTER" layoutX="53.0" layoutY="174.0" text="Select Your Employee type" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
          </children>
       </Pane>
       <TextField layoutX="247.0" layoutY="68.0" promptText="e.g " styleClass="text_field" stylesheets="@style.css" />
       <TextField layoutX="247.0" layoutY="141.0" styleClass="text_field" stylesheets="@style.css" />
-      <TextField layoutX="247.0" layoutY="216.0" />
-      <TextField layoutX="247.0" layoutY="300.0" />
+      <TextField layoutX="247.0" layoutY="216.0" styleClass="text_field" stylesheets="@style.css" />
+      <TextField layoutX="247.0" layoutY="300.0" styleClass="text_field" stylesheets="@style.css" />
       <Text layoutX="246.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Name">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -39,5 +43,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
+      <Button layoutX="515.0" layoutY="353.0" mnemonicParsing="false" text="Add" />
+      <Button layoutX="430.0" layoutY="353.0" mnemonicParsing="false" text="Cancel  " />
    </children>
 </Pane>

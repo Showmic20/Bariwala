@@ -3,24 +3,24 @@ package com.example.home_management;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.new_flat_info;
 
 import java.io.IOException;
-import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
-import java.util.ResourceBundle;
 
 public class HelloController  {
     @FXML
@@ -30,12 +30,16 @@ public class HelloController  {
     @FXML
     private ImageView imageView;
     private Button appartment_button = new Button();
-    @FXML
-    protected void onHelloButtonClick() {
+  /*  //@FXML
+    //protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    }*/
     @FXML
-    private Pane pane101,pane102;
+    private Pane pane101;
+    @FXML
+    public GridPane post_grid;
+
+    private List<new_flat_info> postlist;
 
 
 
@@ -60,17 +64,17 @@ public class HelloController  {
         stage.show();
         appartment_button.setStyle("-fx-background-color: #ff0000;");
     }
-    public void addunit(ActionEvent event)throws IOException
-    {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("add_unit1.fxml"));
-        Parent root1 = (Parent)fxmlLoader.load();
-        //Scene scene = new Scene(fxmlLoader.load());
-       // stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Stage st = new Stage();
-        st.setTitle("Unit Information ");
-        st.setScene(new Scene(root1));
-        st.show();
-    }
+//    public void addunit(ActionEvent event)throws IOException
+//    {
+//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("add_unit1.fxml"));
+//        Parent root1 = (Parent)fxmlLoader.load();
+//        //Scene scene = new Scene(fxmlLoader.load());
+//       // stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//        Stage st = new Stage();
+//        st.setTitle("Unit Information ");
+//        st.setScene(new Scene(root1));
+//        st.show();
+//    }
     public void addrental(ActionEvent event)throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Add_rental.fxml"));
@@ -174,8 +178,52 @@ public class HelloController  {
 
    }
 
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        choiceBox.getItems().addAll(catagori);
-//    }
+/*  List<new_flat_info> ls = new ArrayList<>();
+    int colomn = 0;
+    int row = 1;
+        public void makepane(){
+            System.out.println("initilize fuction");
+
+            //postlist = new ArrayList<>(data());
+
+            try {
+              //  for (int i = 0; i < postlist.size(); i++) {
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+                    fxmlLoader.setLocation(getClass().getResource("new_flat.fxml"));
+               // add_unit_controller auc = new add_unit_controller();
+              // System.out.println(auc.getName());
+              // System.out.println(auc.amount);
+                new_flat_info nfi = new new_flat_info();
+                nfi.setImagesrc("/images/home.png");
+                nfi.setName("Flat 101");
+                nfi.setAmount("100000");
+                ls.add(nfi);
+                    VBox vBox = fxmlLoader.load();
+                    new_appartment_controller nac = fxmlLoader.getController();
+                    nac.setdata(nfi);
+                    if (colomn == 6) {
+                        colomn = 0;
+                        ++row;
+                    }
+                    post_grid.add(vBox, colomn++, row);
+                   GridPane.setMargin(vBox, new Insets(10));
+               // }
+            } catch (Exception e) {
+
+            }
+
+        }*/
+
+
+/*       public List<new_flat_info> data () {
+           System.out.println("HIii");
+           List<new_flat_info> ls = new ArrayList<>();
+           model_post mp = new model_post();
+           mp.setImagesrc("/images/home.png");
+           mp.setName("flat 010");
+           ls.add(mp);
+           return ls;
+       }*/
+
+
 }

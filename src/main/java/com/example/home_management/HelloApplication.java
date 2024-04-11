@@ -15,22 +15,18 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        //getUserAgentStylesheet()
-       // Image img = new Image("\"E:\\Home_management\\src\\main\\resources\\images\\profile picture.jpg\"");
-        /*ImageView imageView = new ImageView();
-        imageView.setFitWidth(200); // Set width of the image
-        imageView.setFitHeight(200); // Set height of the image
-        Circle c = new Circle();
-        imageView.setClip(c);
-*/
+
+
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setMaximized(true);
         scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
-        StackPane stackPane = new StackPane();
-        //stackPane.getChildren().add(imageVie    w);
 
+        Image icon =new Image("E:\\Home_management\\src\\main\\resources\\images\\home.png");
+
+        stage.getIcons().add(icon);
         stage.setTitle("HOME MANAGEMENT");
+
         stage.setScene(scene);
         stage.show();
     }

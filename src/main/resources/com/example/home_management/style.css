@@ -177,6 +177,9 @@
 .mouse-moved : hover{
 -fx-background-color: #EFEFEF;
 }
+.selected{
+-fx-background-color: #F4F5F9;
+}
 .add_enployee_background{
 -fx-background-color:#ffffff;
         -fx-border-color: #ffffff;
